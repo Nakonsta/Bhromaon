@@ -1,0 +1,85 @@
+@import "fonts"
+@import "libs"
+@import "vars"
+
+*
+	-webkit-box-sizing: border-box
+	-moz-box-sizing: border-box
+	box-sizing: border-box
+	&:before, &:after
+		-webkit-box-sizing: border-box
+		-moz-box-sizing: border-box
+		box-sizing: border-box
+
+*::-webkit-input-placeholder
+	color: #666
+	opacity: 1
+
+*:-moz-placeholder
+	color: #666
+	opacity: 1
+
+*::-moz-placeholder
+	color: #666
+	opacity: 1
+
+*:-ms-input-placeholder
+	color: #666
+	opacity: 1
+
+body input:focus:required:invalid,
+body textarea:focus:required:invalid
+	color: #666
+body input:required:valid,
+body textarea:required:valid
+	color: #666
+
+html, body
+	height: 100%
+
+body
+	font-size: 16px
+	min-width: 320px
+	position: relative
+	line-height: 1.62
+	font-family: $default-font
+	overflow-x: hidden
+	color: #fff
+
+.img-responsive
+	display: block
+	max-width: 100%
+	height: auto
+
+.text-center
+	text-align: center
+
+::selection
+	background-color: $accent
+	color: #fff
+
+.header
+	height: 100vh
+	background-size: cover
+	position: relative
+	.container
+		height: 100%
+	.h1
+		font-size: 48px
+		text-transform: uppercase
+		letter-spacing: 0.1em
+		margin-bottom: 0
+	.subtitle
+		font-size: 22px
+		letter-spacing: 0.31em
+		margin-top: -15px
+	&__text
+		position: absolute
+		top: 50%
+		transform: translate(-50%, -70%)
+		text-align: center
+		margin: auto
+		left: 50%
+
+
+@import "media" // Всегда в конце
