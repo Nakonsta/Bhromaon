@@ -46,6 +46,39 @@ body
 	overflow-x: hidden
 	color: #fff
 
+.button
+	background-color: $accent
+	font-family: 'optimal-medium', sans-serif
+	border: none
+	text-transform: uppercase
+	height: 60px
+	width: 225px
+	paddin: 80px
+	transition: all 0.5s ease
+	letter-spacing: 0.075em
+	&::after
+		transition: background-color 0.4s ease
+		position: absolute
+		content: ""
+		height: 4px
+		bottom: 0
+		width: 100%
+		background-color: darken($accent, 50%)
+		opacity: .18
+		border-bottom-left-radius: 2px
+		border-bottom-right-radius: 2px
+		left: 0
+	&:focus
+		outline: none
+	&:hover
+		background-color: lighten($accent, 10%)
+		&::after
+			opacity: .22
+	&:active
+		background-color: darken($accent, 10%)
+		&::after
+			opacity: .32
+
 .img-responsive
 	display: block
 	max-width: 100%
@@ -57,6 +90,9 @@ body
 ::selection
 	background-color: $accent
 	color: #fff
+
+input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill
+    background-color: rgb(192, 204, 255) !important
 
 .header
 	height: 100vh
@@ -83,6 +119,9 @@ body
 	&__form
 		margin-top: 50px
 		min-width: 650px
+		.form-row>.col, .form-row>[class*=col-]
+			padding-right: 0 !important
+			padding-left: 0 !important
 		input, button
 			width: 100%
 			height: 60px
@@ -127,6 +166,36 @@ body
 			font-family: 'optimal', sans-serif
 			text-transform: uppercase
 			padding-right: 40px
+
+.about
+	&__content
+		margin: 150px 0 130px
+	&__title
+		margin: 0 0 70px
+		font-size: 36px
+		font-family: 'optimal', sans-serif
+	&__description
+		p
+			margin-bottom: 35px
+		p:last-child
+			margin-bottom: 50px
+	&__images
+		margin-top: 120px
+
+.features
+	background-color: $dark
+	font-size: 36px
+	font-family: 'optimal', sans-serif
+	padding: 90px 0 105px
+	&__item
+		&-1 i
+			color: $accent
+		&-2 i
+			color: #ff6363
+		&-3 i
+			color: #00a2ff
+	i
+		font-size: 50px
 
 
 
