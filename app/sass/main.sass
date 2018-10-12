@@ -48,7 +48,7 @@ body
 
 .button
 	background-color: $accent
-	font-family: 'optimal-medium', sans-serif
+	font-weight: 700
 	border: none
 	text-transform: uppercase
 	height: 60px
@@ -86,6 +86,11 @@ body
 
 .text-center
 	text-align: center
+
+.title
+		margin: 0 0 70px
+		font-size: 36px
+		font-family: 'optimal', sans-serif
 
 ::selection
 	background-color: $accent
@@ -152,6 +157,7 @@ input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill
 		position: absolute
 		bottom: 90px
 		left: 50%
+		transform: translate(-50%)
 	.nav
 		position: absolute
 		bottom: 0
@@ -170,10 +176,7 @@ input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill
 .about
 	&__content
 		margin: 150px 0 130px
-	&__title
-		margin: 0 0 70px
-		font-size: 36px
-		font-family: 'optimal', sans-serif
+
 	&__description
 		p
 			margin-bottom: 35px
@@ -186,16 +189,76 @@ input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill
 	background-color: $dark
 	font-size: 36px
 	font-family: 'optimal', sans-serif
-	padding: 90px 0 105px
+	padding: 50px 0 75px
 	&__item
+		margin: 30px 0
 		&-1 i
 			color: $accent
 		&-2 i
 			color: #ff6363
 		&-3 i
 			color: #00a2ff
-	i
-		font-size: 50px
+	img
+		margin-bottom: 30px
+
+.country
+	&__item
+		background-color: rgba($dark, 0.9)
+		padding: 50px 50px 50px 30px
+		margin-top: 230px
+		margin-bottom: 100px
+	&__name
+		font-size: 20px
+	h2
+		font-size: 20px
+		text-transform: uppercase
+		margin: 30px 0
+	&__text
+		margin-bottom: 50px
+
+.s-tourists
+	.owl-carousel
+
+	.owl-nav
+		text-align: right
+		margin-top: 30px
+		i
+			border: 1px solid #fff
+			padding: 10px 30px
+			font-size: 24px		
+	.owl-prev, .owl-next
+		display: inline-block
+	.owl-next
+		margin-left: 15px
+
+
+.tourist
+	.row
+		margin-right: 0 !important
+		margin-left: 0 !important
+	&__photo
+		background: url(../img/our-tourist.jpg) no-repeat
+		background-size: cover
+		height: 100%
+		padding: 0
+	&__pic
+		padding: 0
+	&__text
+		background-color: $dark
+		padding: 50px 85px 50px 60px
+	&__quote
+		i
+			display: inline
+			float: left
+			margin-right: 10px
+			margin-top: -15px
+			color: $accent
+			font-size: 28px
+	&__name
+		font-size: 20px
+		text-transform: uppercase
+		padding-bottom: 50px
+	
 
 
 
