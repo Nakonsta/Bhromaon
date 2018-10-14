@@ -14,5 +14,23 @@ $(function() {
 		}
 	});
 
+	$(".scroll").click(function() {
+		$('html, body').animate({
+			scrollTop: $(".nav").offset().top
+		}, 2000);
+	});
+   
+	$(window).scroll(function() { 
+		if ($(this).scrollTop() > $(this).height()) {
+  			$(".top").addClass("active-top");
+  		} else {
+  			$(".top").removeClass("active-top");
+  		}
+	});
+
+	$(".top").click(function() {
+		$("html,body").stop().animate({scrollTop: 0}, "slow", "swing");
+
+	});
 
 });
